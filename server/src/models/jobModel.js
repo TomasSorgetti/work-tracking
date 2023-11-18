@@ -1,5 +1,4 @@
 const { DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
 
 module.exports = (sequelize) => {
   const Job = sequelize.define("job", {
@@ -11,16 +10,15 @@ module.exports = (sequelize) => {
     },
     position: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     company: {
       type: DataTypes.STRING,
     },
-    link: {
+    path: {
       type: DataTypes.STRING,
     },
     response: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
     },
     firstInterview: {
       type: DataTypes.BOOLEAN,
